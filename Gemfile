@@ -69,6 +69,11 @@ group :test do
 end
 
 gem 'faker'
-gem "simple_form"
+# gem "simple_form"
 
-# gem 'bootstrap', '~> 5.1.0' 
+# gem 'bootstrap', '~> 5.1.0'
+gem "bootstrap", "~> 5.2"
+gem "autoprefixer-rails"
+gem "font-awesome-sass", "~> 6.1"
+gem "simple_form"
+gem "sassc-rails"
