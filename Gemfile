@@ -69,3 +69,6 @@ group :test do
 end
 
 gem 'faker'
+gem "simple_form"
+
+# gem 'bootstrap', '~> 5.1.0' 
