@@ -7,8 +7,10 @@ Rails.application.routes.draw do
 
   # resources :categories, only: [:index, :show, :new, :create, :destroy]
 
-  resources :categories, exept: %i[edit update] do
-    resourcces :bookmarks, only: [:new, :create]
+  root 'categories#index'
+
+  resources :categories, except: %i[edit update] do
+    resources :bookmarks, only: [:new, :create]
   end
 
   resources :bookmarks, only: [:destroy]

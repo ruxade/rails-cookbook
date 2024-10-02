@@ -14,17 +14,16 @@ class CategoriesController < ApplicationController
   def create
     @category = Category.new(category_params)
     if @category.save
-      redirect_to category_path(@category)
+      redirect_to category_path(@category), notice: 'Category was successfully created.'
     else
-      render :new, status: :unproccessable_entity
+      render :new, status: :unprocessable_entity #
     end
   end
 
   def destroy
-    @category = Categoty.find(params[:id])
+    @category = Category.find(params[:id]) #
     @category.destroy
-    # redirect_to categories_path, notice: 'category was deleted'
-    redirect_to categories_path, status: :see_other
+    redirect_to categories_path, notice: 'Category was deleted.', status: :see_other # Added a notice
   end
 
   private
