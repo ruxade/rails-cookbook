@@ -3,11 +3,14 @@
 
     <h1>Add a new category to your cookbook</h1>
 
-    <%= simple_form_for(@category), do |f| %>
+    <%= simple_form_for(@category) do |f| %>
       <%= f.input :name %>
-      <%= f.submit "add category" , class = 'btn btn-primary'%>
+      <%= f.submit "add category" , class: 'btn btn-primary'%>
+
+      <%= f.input :photo, as: :file %> <!-- image upload -->
+
     <% end %>
 
-    <%= link_to 'back', categories_path %>
+    <%= link_to 'back', categories_path, class: 'btn btn-primary' %>
 
 </div>
